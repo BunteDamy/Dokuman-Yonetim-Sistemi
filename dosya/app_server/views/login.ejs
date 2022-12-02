@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+    <div class="loginPanel">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Dosya Döküman Sistemi</div>       
+            </div>
+        
+            <div class="panel-body">
+
+                <form action="/login" method="POST">
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="gylhicon glyhicon-user"></i></span>
+                        <input id="username" type="text" class="form-control" name="username" placeholder="kullanıcı adı" required autofocus>
+
+                    </div>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="gylhicon glyhicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="şifre" required>
+
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Upload">
+                    
+                </form>
+            </div>
+        
+            <div class="panel-footer clearfix">
+            <div class="pull-right">
+                <% if(typeof username!='undefined'){%>
+                    <h2><%=username%></h2>
+                <% } %> 
+                <% if(typeof password!='undefined'){%>
+                    <h3><%=password%></h3>
+                <% } %> 
+
+                
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</div>
